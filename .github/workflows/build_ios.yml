@@ -21,13 +21,20 @@ jobs:
         working-directory: ./frontend
         run: flutter pub get
         
-      - name: Build IPA (No Signing)
+      - name: Build iOS App Bundle
+        working-directory: ./frontend
+        run: flutter build ios --release --no-codesign
+        
+      - name: Package IPA Manually
         working-directory: ./frontend
         run: |
-          flutter build ipa --no-codesign
+          mkdir -p build/ios/iphoneos/Payload
+          cp -r build/ios/iphoneos/Runner.app build/ios/iphoneos/Payload/
+          cd build/ios/iphoneos
+          zip -r Runner.ipa Payload
           
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: release-ipa
-          path: frontend/build/ios/ipa/*.ipa
+          path: frontend/build/ios/iphoneos/Runner.ipa
