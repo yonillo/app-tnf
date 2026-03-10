@@ -533,12 +533,12 @@ class ProfileScreen extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.network(
-              "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Flag_of_Europe.svg/255px-Flag_of_Europe.svg.png",
-              height: 30,
+            Image.asset(
+              "assets/LOGO-CABILDO-TENERIFE.png",
+              height: 40,
             ),
             const SizedBox(width: 15),
-            const Text("UNIÓN EUROPEA", style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: Colors.grey)),
+            const Text("CABILDO DE TENERIFE", style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: Colors.grey)),
           ],
         ),
         const SizedBox(height: 10),

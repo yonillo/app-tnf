@@ -84,9 +84,10 @@ class _SplashScreenState extends State<SplashScreen> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Image.network(
-                                "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Flag_of_Europe.svg/255px-Flag_of_Europe.svg.png",
-                                height: 40,
+                              Image.asset(
+                                "assets/LOGO-CABILDO-TENERIFE.png",
+                                height: 50,
+                                color: Colors.white, // Invertir color para que resalte en el fondo degradado
                               ),
                               const SizedBox(width: 20),
                               const Column(
@@ -96,8 +97,6 @@ class _SplashScreenState extends State<SplashScreen> {
                                   Text("Impulsada por los ODS", style: TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.bold)),
                                 ],
                               ),
-                              const SizedBox(width: 30),
-                              const Icon(Icons.account_balance, color: Colors.white, size: 30), // Placeholder Cabildo
                             ],
                           ),
                         ),
