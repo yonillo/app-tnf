@@ -1,0 +1,14 @@
+node_modules/
+bic_inmuebles_entornos.geojson
+bics.csv
+convert_municipios.js
+data.rdf
+debug_itinerarios.js
+diccionario-de-datos-de-itinerarios-de-la-isla-de-tenerife.json
+diccionario-de-datos-de-puntos-de-interes.json
+load_itinerarios_temp.js
+municipios_borders.json
+municipios.csv
+puntos-de-interes.csv
+.git
+.vscode
